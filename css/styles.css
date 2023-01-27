@@ -759,9 +759,39 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 
  .flex-cart {
+    
     display: inline-block;
     text-decoration: none;
  }
  .flex-cart:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
  }
+
+ .flex-cart-img-wrapper {
+   position: relative;
+   display: inline-block; 
+   overflow: hidden;
+ }
+
+ .overlay {
+    position: absolute;
+    overflow: hidden;
+    transform: translate(0, 100%);
+    transition: transform 250ms linear;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9); 
+    color: #FFFFFF;
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: 0.03em;
+        
+    }
+
+.flex-cart:hover .overlay,
+.flex-cart:focus .overlay {
+    transform: translate(0, 0);
+}
